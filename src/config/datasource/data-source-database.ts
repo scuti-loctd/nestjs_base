@@ -20,5 +20,5 @@ export const dataSourceDatabase: DataSourceOptions = {
 export default new DataSource({
     ...dataSourceDatabase,
     migrationsRun: true,
-    migrations: ['src/migrations/**/*.{js,ts}'],
+    migrations: ['src/migrations/*.{js,ts}'],
 });
