@@ -1,19 +1,19 @@
 version: '3.9'
 
 services:
-  api:
-    container_name: nest_api
-    build:
-      dockerfile: Dockerfile
-    environment:
-      NODE_ENV: development
-      PORT: ${APP_PORT}
-      PGPASSWORD: ${DATABASE_PASSWORD}
-      PGUSER: ${DATABASE_USERNAME}
-    ports:
-    - ${APP_PORT}:3000
-    depends_on:
-      - db
+#  api:
+#    container_name: nest_api
+#    build:
+#      dockerfile: Dockerfile
+#    environment:
+#      NODE_ENV: development
+#      PORT: ${APP_PORT}
+#      PGPASSWORD: ${DATABASE_PASSWORD}
+#      PGUSER: ${DATABASE_USERNAME}
+#    ports:
+#    - ${APP_PORT}:3000
+#    depends_on:
+#      - db
 
   db:
     container_name: db
