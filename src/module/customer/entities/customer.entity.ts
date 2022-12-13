@@ -1,7 +1,8 @@
 import {IBaseEntity} from "../../base/base.entity";
-import {BeforeInsert, BeforeUpdate, Column, PrimaryGeneratedColumn} from "typeorm";
+import {BeforeInsert, BeforeUpdate, Column, Entity, PrimaryGeneratedColumn} from "typeorm";
 import * as bcrypt from 'bcrypt';
 
+@Entity()
 export class Customer extends IBaseEntity{
     @PrimaryGeneratedColumn()
     id: number;

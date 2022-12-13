@@ -34,9 +34,7 @@ export class CustomerService {
   async login(email: string, password: string): Promise<CustomerLoginResponseDto> {
     const result = new CustomerLoginResponseDto();
     const customer: Customer = await this.findByEmail(email);
-    console.log(customer);
     const check = await bcrypt.compare(password, customer.password);
-    console.log(check);
     if (!check) {
       throw AuthorizationException.unauthorizedException();
     }
